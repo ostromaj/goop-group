@@ -1,0 +1,80 @@
+<!doctype html>
+<!-- (c) Mr. O - free to play, not to copy. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Goop Group</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟢</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=6">
+</head>
+<body class="student">
+<section id="join" class="screen center">
+<div class="card join-card">
+<h1 class="logo">Goop<span>Group</span></h1>
+<p class="tag">Build a goop. Eat your classmates. Try not to get eaten.</p>
+<form id="joinForm" autocomplete="off">
+<label for="code">Room code</label>
+<input id="code" maxlength="4" placeholder="ABCD" inputmode="text" autocapitalize="characters" spellcheck="false">
+<button class="big" type="submit">Next →</button>
+<p id="joinError" class="error" role="alert"></p>
+</form>
+<p id="modeNote" class="note"></p>
+</div>
+</section>
+<section id="creator" class="screen hidden">
+<div class="creator-wrap">
+<div class="preview-col">
+<canvas id="preview"></canvas>
+<div class="name-row">
+<span id="goopName" class="goop-name">Wobbly Gloop</span>
+<button id="rerollName" class="icon-btn" title="New name">🎲</button>
+</div>
+<div id="stats" class="stats"></div>
+</div>
+<div class="controls-col">
+<div class="ctl-head">
+<h2>Build your goop</h2>
+<button id="randomize" class="ghost">🎲 Surprise me</button>
+</div>
+<div class="ctl-group"><h3>Body</h3><div id="bodies" class="chips"></div></div>
+<div class="ctl-group"><h3>Color</h3><div id="colors" class="swatches"></div></div>
+<div class="ctl-group"><h3>Pattern</h3><div id="patterns" class="chips"></div></div>
+<div class="ctl-group">
+<h3>Parts <span id="points" class="points">10 goop points left</span></h3>
+<div id="parts" class="parts"></div>
+</div>
+<button id="goopUp" class="big go">Goop Group Up! 🟢</button>
+<button id="cancelEdit" class="ghost hidden">Cancel</button>
+</div>
+</div>
+</section>
+<section id="play" class="screen hidden">
+<canvas id="game"></canvas>
+<div class="vignette"></div>
+<div class="hud">
+<div class="hud-me">
+<div id="meName" class="me-name"></div>
+<div class="me-mass">Size <b id="meMass">10</b> · Eats <b id="meEats">0</b></div>
+<button id="editGoop" class="ghost small hidden">✏️ Edit goop</button>
+</div>
+<div id="status" class="status-pill">Connecting…</div>
+<div id="fx" class="fx"></div>
+<div id="popup" class="popup hidden"></div>
+<ol id="board" class="board"></ol>
+<ul id="feed" class="feed"></ul>
+<canvas id="minimap" width="150" height="150"></canvas>
+<button id="dashBtn" class="dash-btn">DASH</button>
+<div id="offer" class="offer hidden">
+<div class="offer-title">🧬 Mutation! Pick one</div>
+<div id="offerCards" class="offer-cards"></div>
+</div>
+<div class="help">Steer with your mouse or WASD · <b>Click</b> or <b>Space</b> to dash</div>
+</div>
+<div id="overlay" class="overlay hidden"><div id="overlayCard" class="card overlay-card"></div></div>
+</section>
+<script type="module" src="js/game.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "rooms": {
+      "$code": {
+        ".read": "$code.matches(/^[BCDFGHJKLMNPQRSTVWXZ]{4}$/)",
+        ".write": "$code.matches(/^[BCDFGHJKLMNPQRSTVWXZ]{4}$/)"
+      }
+    }
+  }
+}

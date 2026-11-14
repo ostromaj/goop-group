@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- (c) Mr. O - free to play, not to copy. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goop Group · Teacher Screen</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧫</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=6">
+</head>
+<body class="host student">
+<section id="start" class="screen center">
+<div class="card join-card">
+<h1 class="logo">Goop<span>Group</span></h1>
+<p class="tag">Teacher screen. Put this on the projector: it runs the whole game.</p>
+<button id="newRoom" class="big">Open a new room 🧫</button>
+<button id="resumeRoom" class="ghost hidden" style="width:100%;margin-top:12px"></button>
+<p id="startError" class="error" role="alert"></p>
+<p id="hostMode" class="note"></p>
+</div>
+</section>
+<section id="room" class="screen hidden">
+<canvas id="view"></canvas>
+<div class="vignette"></div>
+<div class="hud">
+<div class="host-join">
+<div class="lbl">Go to</div>
+<div id="joinUrl" class="url"></div>
+<div class="lbl" style="margin-top:6px">Room code</div>
+<div id="roomCode" class="room">----</div>
+</div>
+<div id="hostStatus" class="host-status">Warm-up</div>
+<div id="panel" class="host-panel">
+<h3>Controls <button id="collapse" class="ghost small" style="margin:0">Hide</button></h3>
+<div class="collapsible" style="display:flex;flex-direction:column;gap:10px;flex:1;min-height:0">
+<div class="host-row">
+<select id="roundLen" aria-label="Round length">
+<option value="180">3 min round</option>
+<option value="300" selected>5 min round</option>
+<option value="480">8 min round</option>
+<option value="600">10 min round</option>
+</select>
+<button id="startRound" class="host-btn">▶ Start</button>
+</div>
+<div class="host-row">
+<button id="freeze" class="host-btn blue">🧊 Freeze</button>
+<button id="endRound" class="host-btn pink">⏹ End</button>
+</div>
+<div class="host-row">
+<label for="bots" style="margin:auto 0;flex:0 0 auto">Bots</label>
+<select id="bots">
+<option value="0">None</option>
+<option value="3">A few</option>
+<option value="6" selected>Some</option>
+<option value="10">Lots</option>
+</select>
+</div>
+<h3>Goops <span id="count" style="color:var(--text)">0</span></h3>
+<ul id="players" class="players"></ul>
+<p class="warn" id="visWarn">Keep this tab open and visible. It's the game's referee!</p>
+</div>
+</div>
+<ul id="feed" class="feed"></ul>
+</div>
+<div id="overlay" class="overlay hidden"><div id="overlayCard" class="card overlay-card"></div></div>
+</section>
+<script type="module" src="js/host.js?v=6"></script>
+</body>
+</html>

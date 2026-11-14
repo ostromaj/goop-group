@@ -1,0 +1,2 @@
+/* (c) Mr. O - free to play, not to copy. */
+export const FIREBASE_CONFIG={apiKey:"AIzaSyDCotiRpQacvkoA3bUQxgJDz2Jr7u4zAa8",authDomain:"goop-group.firebaseapp.com",databaseURL:"https://goop-group-default-rtdb.firebaseio.com",projectId:"goop-group",storageBucket:"goop-group.firebasestorage.app",messagingSenderId:"1031025453548",appId:"1:1031025453548:web:f2cbe587a32aaf8e01f8c9"};
